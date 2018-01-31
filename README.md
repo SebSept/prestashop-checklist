@@ -1,1 +1,1 @@
-see [index](index.html).
+see [result here.](https://sebsept.github.io/prestashop-checklist/).
