@@ -2,9 +2,9 @@
 
 ## Compte client
 
-[ ] créer un compte
-[] se connecter
-[x] se connecter
+- [ ] créer un compte
+-[] se connecter
+-[x] se connecter
 
 so checkbox are readonly/disabled :\(
 
