@@ -5,6 +5,7 @@
     <title>Prestashop checklist - Front Features (fr)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue" type="text/javascript"></script>
 </head>
 <body>
 <section class="hero is-primary is-bold">
@@ -16,108 +17,118 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section" id="app">
     <div class="container">
-        <h2 class="title">Compte</h2>
-        <ul>
-            <li class="field">
-            <span class="field-body">
-                <label class="checkbox">
-                    <input type="checkbox">
-                    créer un compte
-                </label>
-            </span>
-            </li>
-            <li class="field">
-            <span class="field-body">
-                <label class="checkbox">
-                    <input type="checkbox">
-                        Se connecter à son compte
-                </label>
-            </span>
-            </li>
-            <li class="field">
-                <span class="field-body">
-                    <label class="checkbox">
-                        <input type="checkbox" >
-                            Se déconnecter
-                    </label>
-                </span>
-            </li>
-            <li class="field">
-                <span class="field-body">
-                    <label class="checkbox">
-                        <input type="checkbox" >
-                            Acceder à la page "mon compte"
-                    </label>
-                </span>
-            </li>
-            <li class="field">
-                <span class="field-body">
-                    <label class="checkbox">
-                        <input type="checkbox" >
-                            Voir l'historique de ses commandes
-                    </label>
-                </span>
-            </li>
-            <!--@todo a explorer-->
-            <li class="field">
-                <span class="field-body">
-                    <label class="checkbox">
-                        <input type="checkbox" >
-                            Voir ses bons de réduction
-                    </label>
-                </span>
-            </li>
-            <!--@todo explorer-->
-            <li class="field">
-                <span class="field-body">
-                    <label class="checkbox">
-                        <input type="checkbox" >
-                            Voir ses alertes
-                    </label>
-                </span>
-            </li>
-            <!--@todo explorer-->
-            <li class="field">
-                <span class="field-body">
-                    <label class="checkbox">
-                        <input type="checkbox" >
-                            voir ses retour de marchandise
-                    </label>
-                </span>
-            </li>
-            <!--@todo -->
-            <li class="field">
-                <span class="field-body">
-                    <label class="checkbox">
-                        <input type="checkbox" >
-                            voir ses avoirs
-                    </label>
-                </span>
-            </li><!--@todo -->
-            <li class="field">
-                <span class="field-body">
-                    <label class="checkbox">
-                        <input type="checkbox" >
-                            Voir ses adresses
-                    </label>
-                </span>
-            </li><!--@todo -->
-            <li class="field">
-                <span class="field-body">
-                    <label class="checkbox">
-                        <input type="checkbox" >
-                            voir ses informations personnelles
-                    </label>
-                </span>
-            </li><!--@todo -->
+        <div class="columns">
+            <div class="column">
+                <div class="box">
+                    <h2 class="title">Compte</h2>
+                    <ul>
+                        <item text="créer un compte"></item>
+                        <item text="Se connecter à son compte"></item>
+                        <item text="Se déconnecter"></item>
+                        <item text="Acceder à la page mon compte"></item>
+                        <item text="Voir l'historique de ses commandes"></item>
+                        <!--@todo a explorer-->
+                        <item text="Voir ses bons de réduction"></item>
+                        <!--@todo explorer-->
+                        <item text="Voir ses alertes"></item>
+                        <!--@todo explorer-->
+                        <item text="voir ses retour de marchandise"></item>
+                        <!--@todo -->
+                        <item text="voir ses avoirs"></item><!--@todo -->
+                    </ul>
+                </div>
 
-        </ul>
+                <div class="box">
+                    <h2 class="title">Adresses</h2>
+                    <ul>
+                        <item text="Voir ses adresses"></item>
+                        <item text="Ajouter une adresse"></item>
+                        <item text="Supprimer une adresse"></item>
+                        <item text="Modifier une adresse"></item>
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <h2 class="title">Informations personnelles</h2>
+
+                    <ul>
+                        <item text="Voir / Modifier ses informations personnelles"></item>
+                        <item text="Vérifier le changement de mot de passe"></item>
+                    </ul>
+                </div>
+
+                <div class="box">
+
+                    <h2 class="title">Commande</h2>
+
+                    <hr>
+                    <h3 class="subtitle">Récapitulatif de commande</h3>
+
+                    <ul>
+                        <item text="Modifier la quantité d'un produit"></item>
+                        <item text="Supprimer un produit"></item>
+                        <item text="Utiliser un bon de réduction"></item>
+                        <item text="Passer à l'étape suivante"></item>
+
+                    </ul>
+
+                    <hr>
+                    <h3 class="subtitle">Connexion</h3>
+
+                    <ul>
+                        <item text="Créer un compte"></item>
+                        <item text="Se connecter"></item>
+                        <item text="Echouer à se connecter"></item>
+                    </ul>
+
+                    <hr>
+                    <h3 class="subtitle">Adresse</h3>
+
+                    <ul>
+                        <item text="Changer d'adresse"></item>
+                        <item text="utiliser une adresse de facturation différente"></item>
+                        <item text="Aller créer une adresse et revenir"></item>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="box">
+                    <h2 class="title">Panier</h2>
+                    <ul>
+                        <item text="Ajouter un produit à partir d'une page produit"></item>
+                        <item text="Ajouter un produit à partir d'une page de catégorie (ou autre liste)"></item>
+                        <item text="Supprimer un produit du panier (bloc panier)"></item>
+                        <item text="Supprimer un produit du panier (page panier)"></item>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
     </div>
-    
-    
+
+
 </section>
+
+<script type="text/javascript">
+        Vue.component('item', {
+                    template: `<li class="field">
+                                    <span class="field-body">
+                                        <label class="checkbox">
+                                            <input type="checkbox" >
+                                                {{ text }}
+                                        </label>
+                                    </span>
+                                </li>`,
+                    props: ['text']
+                }
+        );
+
+        var app7 = new Vue({ el: '#app'});
+</script>
 
 </body>
 </html>
