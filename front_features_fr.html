@@ -28,11 +28,9 @@
                         <item text="Se connecter à son compte"></item>
                         <item text="Se déconnecter"></item>
                         <item text="Accéder à la page mon compte"></item>
-                        <item text="Voir ses alertes"></item>
-                        <!--@todo explorer-->
                         <item text="voir ses retour de marchandise"></item>
-                        <!--@todo -->
-                        <item text="voir ses avoirs"></item><!--@todo -->
+                        <item text="voir ses avoirs"></item>
+                        <item text="utiliser un avoir"></item>
                     </ul>
                 </div>
 
@@ -104,7 +102,7 @@
                 </div>
 
                 <div class="box">
-                    <h2>Historique des commandes</h2>
+                    <h2 class="title">Historique des commandes</h2>
                     <ul>
                         <item text="Voir l'historique de ses commandes"></item>
                         <item text="voir le détail d'une commande"></item>
@@ -114,10 +112,26 @@
                     </ul>
                 </div>
 
+                <div class="box">
+                    <h2 class="title">Alertes email (module)</h2>
+                    <hr>
+                    <h3 class="subtitle">Client</h3>
+                    <ul>
+                        <item text="Voir ses alertes"></item>
+                        <item text="créer une alerte sur un produit (hors stock)"></item>
+                    </ul>
+
+                    <h3 class="subtitle">Vendeur</h3>
+                    <ul>
+                        <item text="Recevoir alerte lors d'une nouvelle commande"></item>
+                    </ul>
+
+                </div>
+
                 <!--<div class="box">-->
-                    <!--<ul>-->
-                        <!--<item text="Voir ses bons de réduction"></item>-->
-                    <!--</ul>-->
+                <!--<ul>-->
+                <!--<item text="Voir ses bons de réduction"></item>-->
+                <!--</ul>-->
                 <!--</div>-->
 
             </div>
@@ -129,8 +143,8 @@
 </section>
 
 <script type="text/javascript">
-        Vue.component('item', {
-                    template: `<li class="field">
+    Vue.component('item', {
+            template: `<li class="field">
                                     <span class="field-body">
                                         <label class="checkbox">
                                             <input type="checkbox" >
@@ -138,11 +152,11 @@
                                         </label>
                                     </span>
                                 </li>`,
-                    props: ['text']
-                }
-        );
+            props: ['text']
+        }
+    );
 
-        var app7 = new Vue({ el: '#app'});
+    var app7 = new Vue({el: '#app'});
 </script>
 
 </body>
