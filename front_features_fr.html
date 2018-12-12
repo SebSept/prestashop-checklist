@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/npm/vue" type="text/javascript"></script>
+    <script src="mine.js" type="text/javascript"></script>
 </head>
 <body>
 <section class="hero is-primary is-bold">
@@ -17,317 +18,259 @@
     </div>
 </section>
 
-<section id="app" class="section">
+<section class="section" id="app">
     <div class="container">
         <div class="columns">
             <div class="column">
-                <div class="box"><h2 class="title">Compte</h2>
+                <div class="box">
+                    <h2 class="title">Compte</h2>
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                créer un compte
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Se connecter à son compte
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Se déconnecter
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Accéder à la page mon compte
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                voir ses retour de marchandise
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                voir ses avoirs
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                utiliser un avoir
-                                        </label></span></li>
+                        <item text="créer un compte"></item>
+                        <item text="Se connecter à son compte"></item>
+                        <item text="Se déconnecter"></item>
+                        <item text="Accéder à la page mon compte"></item>
+                        <item text="voir ses retour de marchandise"></item>
+                        <item text="voir ses avoirs"></item>
+                        <item text="utiliser un avoir"></item>
                     </ul>
                 </div>
-                <div class="box"><h2 class="title">Adresses</h2>
+
+                <div class="box">
+                    <h2 class="title">Adresses</h2>
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Voir ses adresses
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Ajouter une adresse
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Supprimer une adresse
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Modifier une adresse
-                                        </label></span></li>
+                        <item text="Voir ses adresses"></item>
+                        <item text="Ajouter une adresse"></item>
+                        <item text="Supprimer une adresse"></item>
+                        <item text="Modifier une adresse"></item>
                     </ul>
                 </div>
-                <div class="box"><h2 class="title">Informations personnelles</h2>
+
+                <div class="box">
+                    <h2 class="title">Informations personnelles</h2>
+
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Voir / Modifier ses informations personnelles
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Vérifier le changement de mot de passe
-                                        </label></span></li>
+                        <item text="Voir / Modifier ses informations personnelles"></item>
+                        <item text="Vérifier le changement de mot de passe"></item>
                     </ul>
                 </div>
-                <div class="box"><h2 class="title">Commande</h2>
+
+                <div class="box">
+
+                    <h2 class="title">Commande</h2>
+
                     <hr>
                     <h3 class="subtitle">Récapitulatif de commande</h3>
+
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Modifier la quantité d'un produit
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Supprimer un produit
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Utiliser un bon de réduction
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Passer à l'étape suivante
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                voir ses bons de rédution
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                utiliser un bon de réduction
-                                        </label></span></li>
+                        <item text="Modifier la quantité d'un produit"></item>
+                        <item text="Supprimer un produit"></item>
+                        <item text="Utiliser un bon de réduction"></item>
+                        <item text="Passer à l'étape suivante"></item>
+                        <item text="voir ses bons de rédution"></item>
+                        <item text="utiliser un bon de réduction"></item>
                     </ul>
+
                     <hr>
                     <h3 class="subtitle">Connexion</h3>
+
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Créer un compte
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Se connecter
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Echouer à se connecter
-                                        </label></span></li>
+                        <item text="Créer un compte"></item>
+                        <item text="Se connecter"></item>
+                        <item text="Echouer à se connecter"></item>
                     </ul>
+
                     <hr>
                     <h3 class="subtitle">Adresse</h3>
+
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Changer d'adresse
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                utiliser une adresse de facturation différente
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Aller créer une adresse et revenir
-                                        </label></span></li>
+                        <item text="Changer d'adresse"></item>
+                        <item text="utiliser une adresse de facturation différente"></item>
+                        <item text="Aller créer une adresse et revenir"></item>
                     </ul>
+
                     <hr>
                     <h3 class="subtitle">Choix transporteur</h3>
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Changer de transporteur
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                poursuivre uniquement en acceptant les cgv
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                accéder a la page des cgv
-                                        </label></span></li>
+                        <item text="Changer de transporteur"></item>
+                        <item text="poursuivre uniquement en acceptant les cgv"></item>
+                        <item text="accéder a la page des cgv"></item>
                     </ul>
+
                     <hr>
                     <h3 class="subtitle">Paiement - visiteur</h3>
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                passer une commande avec chaque moyen de paiement
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                recevoir le mail de confirmation de commande
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                voir la commande dans sa liste de commande
-                                        </label></span></li>
+                        <item text="passer une commande avec chaque moyen de paiement"></item>
+                        <item text="recevoir le mail de confirmation de commande"></item>
+                        <item text="voir la commande dans sa liste de commande"></item>
                     </ul>
+
                     <hr>
                     <h3 class="subtitle">Paiement - vendeur</h3>
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                voir la commande dans la liste
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                voir le détail de la commande
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                voir le paiement dans le backoffice banque
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                commande non payée apparaît bien avec état cohérent
-                                        </label></span></li>
+                        <item text="voir la commande dans la liste"></item>
+                        <item text="voir le détail de la commande"></item>
+                        <item text="voir le paiement dans le backoffice banque"></item>
+                        <item text="commande non payée apparaît bien avec état cohérent"></item>
                     </ul>
+
                 </div>
             </div>
+
             <div class="column">
-                <div class="box"><h2 class="title">Bloc Panier</h2>
+                <div class="box">
+                    <h2 class="title">Bloc Panier</h2>
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Ajouter un produit à partir d'une page produit
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Ajouter un produit à partir d'une page de catégorie (ou autre liste)
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Supprimer un produit du panier (bloc panier)
-                                        </label></span></li>
+                        <item text="Ajouter un produit à partir d'une page produit"></item>
+                        <item text="Ajouter un produit à partir d'une page de catégorie (ou autre liste)"></item>
+                        <item text="Supprimer un produit du panier (bloc panier)"></item>
+
                     </ul>
                 </div>
-                <div class="box"><h2 class="title">Historique des commandes</h2>
+
+                <div class="box">
+                    <h2 class="title">Historique des commandes</h2>
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Voir l'historique de ses commandes
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                voir le détail d'une commande
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                voir un facture (pdf)
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                commander a nouveau (2 boutons à tester)
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                poster un message à propos d'une commande
-                                        </label></span></li>
+                        <item text="Voir l'historique de ses commandes"></item>
+                        <item text="voir le détail d'une commande"></item>
+                        <item text="voir un facture (pdf)"></item>
+                        <item text="commander a nouveau (2 boutons à tester)"></item>
+                        <item text="poster un message à propos d'une commande"></item>
                     </ul>
                 </div>
-                <div class="box"><h2 class="title">Alertes email (module)</h2>
+
+                <div class="box">
+                    <h2 class="title">Alertes email (module)</h2>
                     <hr>
                     <h3 class="subtitle">Client</h3>
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Voir ses alertes
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                créer une alerte sur un produit (hors stock)
-                                        </label></span></li>
+                        <item text="Voir ses alertes"></item>
+                        <item text="créer une alerte sur un produit (hors stock)"></item>
                     </ul>
+
                     <hr>
                     <h3 class="subtitle">Vendeur</h3>
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                lors d'une nouvelle commande
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                lors de la limite de stock d'un produit
-                                        </label></span></li>
+                        <item text="lors d'une nouvelle commande"></item>
+                        <item text="lors de la limite de stock d'un produit"></item>
                     </ul>
+
                 </div>
-                <div class="box"><h2 class="title">Catégories / Listings</h2>
+
+                <div class="box">
+                    <h2 class="title">Catégories / Listings</h2>
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                sous catégories sont visibles
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                produits sont visibles
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                tri produit est effectif
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                logos 'nouveau' et 'promotion' apparaissent bien
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                access à la liste des nouveautés
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                accèss à la liste de promotions
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                pagination est fonctionnelle
-                                        </label></span></li>
+                        <item text="sous catégories sont visibles"></item>
+                        <item text="produits sont visibles"></item>
+                        <item text="tri produit est effectif"></item>
+                        <item text="logos 'nouveau' et 'promotion' apparaissent bien"></item>
+                        <item text="access à la liste des nouveautés"></item>
+                        <item text="accèss à la liste de promotions"></item>
+                        <item text="pagination est fonctionnelle"></item>
                     </ul>
                 </div>
+
                 <div class="box"><h2 class="title">Menu catégories</h2>
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Dans le menu horizontal
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Dans le menu mobile
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Dans la colonne gauche
-                                        </label></span></li>
+                        <item text="Dans le menu horizontal"></item>
+                        <item text="Dans le menu mobile"></item>
+                        <item text="Dans la colonne gauche"></item>
                     </ul>
                 </div>
-                <div class="box"><h2 class="title">Recherche</h2>
+
+
+                <div class="box">
+                    <h2 class="title">Recherche</h2>
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                par nom de produit
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                par référence
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                par mot clé
-                                        </label></span></li>
+                        <item text="par nom de produit"></item>
+                        <item text="par référence"></item>
+                        <item text="par mot clé"></item>
                     </ul>
                 </div>
-                <div class="box"><h2 class="title">Divers</h2>
+
+                <div class="box">
+                    <h2 class="title">Divers</h2>
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                liste de mots clés dans la colonne de gauche
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                liste de produits par mot clé
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                voir une page de cms
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                voir listing des pages cms d'une catégorie
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                liens de bas de page
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                inscription à la newsletter
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                page de contact s'affiche
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                formulaire de contact soumis
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                message du formulaire reçu
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                accusé de reception de la sousmission formulaire de contact
-                                        </label></span></li>
+                        <item text="liste de mots clés dans la colonne de gauche"></item>
+                        <item text="liste de produits par mot clé"></item>
+                        <item text="voir une page de cms"></item>
+                        <item text="voir listing des pages cms d'une catégorie"></item>
+                        <item text="liens de bas de page"></item>
+                        <item text="inscription à la newsletter"></item>
+                        <item text="page de contact s'affiche"></item>
+                        <item text="formulaire de contact soumis"></item>
+                        <item text="message du formulaire reçu"></item>
+                        <item text="accusé de reception de la sousmission formulaire de contact"></item>
                     </ul>
                 </div>
-                <div class="box"><h2 class="title">RGPD</h2>
+
+                <div class="box">
+                    <h2 class="title">RGPD</h2>
                     <ul>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Formulaire de création de compte
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Dans le compte client
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Formulaire de contact
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Alertes par e-mail
-                                        </label></span></li>
-                        <li class="field"><span class="field-body"><label class="checkbox"><input type="checkbox">
-                                                Colissimo - Intégration en web service - Officiel
-                                        </label></span></li>
+                        <item text="Formulaire de création de compte"></item>
+                        <item text="Dans le compte client"></item>
+                        <item text="Formulaire de contact"></item>
+                        <item text="Alertes par e-mail"></item>
+                        <item text="Colissimo - Intégration en web service - Officiel"></item>
                     </ul>
                 </div>
+
+
+                <!--<div class="box">-->
+                <!--<ul>-->
+                <!--<item text="Voir ses bons de réduction"></item>-->
+                <!--</ul>-->
+                <!--</div>-->
+
             </div>
+
         </div>
     </div>
+
+
 </section>
+
+<script type="text/javascript">
+    Vue.component('item', {
+            template: `<li class="field">
+                                    <span class="field-body">
+                                        <label class="checkbox">
+                                            <input type="checkbox" v-bind:name="namify(text)" >
+                                                {{ text }}
+                                        </label>
+                                    </span>
+                                </li>`,
+            props: ['text'],
+        }
+    );
+
+    let namify = (t) => `_${crc32(t)}`
+
+    const makeCRCTable = () => {
+      var c;
+      var crcTable = [];
+      for(var n =0; n < 256; n++){
+        c = n;
+        for(var k =0; k < 8; k++){
+          c = ((c&1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1));
+        }
+        crcTable[n] = c;
+      }
+      return crcTable;
+    }
+
+    const crc32 = (str) => {
+      var crcTable = window.crcTable || (window.crcTable = makeCRCTable());
+      var crc = 0 ^ (-1);
+
+      for (var i = 0; i < str.length; i++ ) {
+        crc = (crc >>> 8) ^ crcTable[(crc ^ str.charCodeAt(i)) & 0xFF];
+      }
+
+      return (crc ^ (-1)) >>> 0;
+    }
+
+    var app7 = new Vue({el: '#app'});
+</script>
 
 </body>
 </html>
