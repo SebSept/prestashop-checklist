@@ -16,6 +16,12 @@ const bindStateChanges = () => {
 }
 
 persistance = {
-  'persist': (e) => localStorage.setItem(e.getAttribute('name'), e.checked),
-  'reload' : (e) => e.checked = (localStorage.getItem(e.getAttribute('name')) === 'true')
+  'persist': (e) => {
+    localStorage.setItem(e.getAttribute('name'), e.checked)
+    console.log('store ', e.getAttribute('name'), e.checked)
+  },
+  'reload' : (e) => {
+    e.checked = (localStorage.getItem(e.getAttribute('name')) === 'true')
+    console.log('retrieve', e.getAttribute('name'), localStorage.getItem(e.getAttribute('name')) === 'true')
+  }
 }
