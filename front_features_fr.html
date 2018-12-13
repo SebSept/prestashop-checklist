@@ -32,6 +32,8 @@
                         <item text="voir ses retour de marchandise"></item>
                         <item text="voir ses avoirs"></item>
                         <item text="utiliser un avoir"></item>
+                        <item text="utiliser un bon de réduction"></item>
+
                     </ul>
                 </div>
 
@@ -55,6 +57,14 @@
                 </div>
 
                 <div class="box">
+                    <h2 class="title">Bons de réduction</h2>
+
+                    <ul>
+                        <item text="Voir ses bons de réduction"></item>
+                    </ul>
+                </div>
+
+                <div class="box">
 
                     <h2 class="title">Commande</h2>
 
@@ -64,10 +74,9 @@
                     <ul>
                         <item text="Modifier la quantité d'un produit"></item>
                         <item text="Supprimer un produit"></item>
+                        <item text="Voir ses bons de rédution"></item>
                         <item text="Utiliser un bon de réduction"></item>
                         <item text="Passer à l'étape suivante"></item>
-                        <item text="voir ses bons de rédution"></item>
-                        <item text="utiliser un bon de réduction"></item>
                     </ul>
 
                     <hr>
@@ -77,6 +86,7 @@
                         <item text="Créer un compte"></item>
                         <item text="Se connecter"></item>
                         <item text="Echouer à se connecter"></item>
+                        <item text="Passer commande en tant qu'invité"></item>
                     </ul>
 
                     <hr>
@@ -91,6 +101,7 @@
                     <hr>
                     <h3 class="subtitle">Choix transporteur</h3>
                     <ul>
+                        <item text="Sont bien relatifs à l'adresse de livraison"></item>
                         <item text="Changer de transporteur"></item>
                         <item text="poursuivre uniquement en acceptant les cgv"></item>
                         <item text="accéder a la page des cgv"></item>
@@ -113,6 +124,18 @@
                         <item text="commande non payée apparaît bien avec état cohérent"></item>
                     </ul>
 
+                </div>
+
+                <!--Paiements-->
+                <div class="box">
+                    <h2 class="title">Paiement</h2>
+
+                    <ul>
+                        <item text="CB"></item>
+                        <item text="Paypal"></item>
+                        <item text="Chèque"></item>
+                        <item text="Virement bancaire"></item>
+                    </ul>
                 </div>
             </div>
 
@@ -236,46 +259,46 @@
 </section>
 
 <script type="text/javascript">
-    Vue.component('item', {
-            template: `<li class="field">
+  Vue.component('item', {
+      template: `<li class="field">
                                     <span class="field-body">
                                         <label class="checkbox">
-                                            <input type="checkbox" v-bind:name="namify(text)" >
+                                            <input type="checkbox" name="namify(text)" >
                                                 {{ text }}
                                         </label>
                                     </span>
                                 </li>`,
-            props: ['text'],
-        }
-    );
+      props: ['text'],
+    }
+  )
 
-    let namify = t => `_${crc32(t)}`
+  let namify = t => `_${crc32(t)}`
 
-    const makeCRCTable = () => {
-      let c
-      const crcTable = []
-      for(let n =0; n < 256; n++){
-        c = n;
-        for(let k =0; k < 8; k++){
-          c = ((c&1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1));
-        }
-        crcTable[n] = c;
+  const makeCRCTable = () => {
+    let c
+    const crcTable = []
+    for (let n = 0; n < 256; n++) {
+      c = n
+      for (let k = 0; k < 8; k++) {
+        c = ((c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1))
       }
-      return crcTable;
+      crcTable[n] = c
+    }
+    return crcTable
+  }
+
+  const crc32 = str => {
+    const crcTable = window.crcTable || (window.crcTable = makeCRCTable())
+    let crc = 0 ^ (-1)
+
+    for (var i = 0; i < str.length; i++) {
+      crc = (crc >>> 8) ^ crcTable[(crc ^ str.charCodeAt(i)) & 0xFF]
     }
 
-    const crc32 = str => {
-      const crcTable = window.crcTable || (window.crcTable = makeCRCTable())
-      let crc = 0 ^ (-1)
+    return (crc ^ (-1)) >>> 0
+  }
 
-      for (var i = 0; i < str.length; i++ ) {
-        crc = (crc >>> 8) ^ crcTable[(crc ^ str.charCodeAt(i)) & 0xFF];
-      }
-
-      return (crc ^ (-1)) >>> 0;
-    }
-
-    new Vue({el: '#app'});
+  new Vue({el: '#app'})
 </script>
 
 </body>
